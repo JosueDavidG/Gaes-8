@@ -12,6 +12,7 @@ from inventario.models import productos,Ropa,productosImplementos,tamaños,Imple
 
 
 def index(request):
+    
     return render(request, 'inicio.html',{
       'mensaje':'Nuevo mensaje desde View.py',
       'tittle':'titulo',
@@ -62,52 +63,12 @@ def register(request):
         'form':form
     })
 
-def inventario_view(request):
-    productoss = productos.objects.all().order_by()
+def Ropa_view(request):
+    Ropas = Ropa.objects.all().order_by()
     
-    return render(request, 'jugadores.html',{
+    return render(request, 'ropa.html',{
       'mensaje':'Nuevo mensaje desde View.py',
       'nombre':'nombre',
-      'jugadores':productoss,
+      'Ropa':Ropas,
     })
 
-def inventario_view(request):
-    productoss = productos.objects.all().order_by()
-    
-    return render(request, 'jugadores.html',{
-      'mensaje':'Nuevo mensaje desde View.py',
-      'nombre':'nombre',
-      'jugadores':productoss,
-    })
-def inventario_view(request):
-    productoss = productos.objects.all().order_by()
-    
-    return render(request, 'jugadores.html',{
-      'mensaje':'Nuevo mensaje desde View.py',
-      'nombre':'nombre',
-      'jugadores':productoss,
-    })
-def inventario_view(request):
-    productoss = productos.objects.all().order_by()
-    
-    return render(request, 'jugadores.html',{
-      'mensaje':'Nuevo mensaje desde View.py',
-      'nombre':'nombre',
-      'jugadores':productoss,
-    })
-def inventario_view(request):
-    productoss = productos.objects.all().order_by()
-    
-    return render(request, 'jugadores.html',{
-      'mensaje':'Nuevo mensaje desde View.py',
-      'nombre':'nombre',
-      'jugadores':productoss,
-    })
-def inventario_view(request):
-    productoss = productos.objects.all().order_by()
-    
-    return render(request, 'jugadores.html',{
-      'mensaje':'Nuevo mensaje desde View.py',
-      'nombre':'nombre',
-      'jugadores':productoss,
-    })
