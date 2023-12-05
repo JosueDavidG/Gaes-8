@@ -67,7 +67,7 @@ def Ropa_view(request):
     Ropas = Ropa.objects.all().order_by()
     
     return render(request, 'Ropa.html',{
-      'mensaje':'Nuevo mensaje desde View.py',
+      'mensaje':'Nuevo mensaje desde  la vista en el archivo View.py',
       'nombre':'nombre',
       'Ropa':Ropas,
     })
