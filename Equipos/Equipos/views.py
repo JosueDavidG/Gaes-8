@@ -66,9 +66,17 @@ def register(request):
 def Ropa_view(request):
     Ropas = Ropa.objects.all().order_by()
     
-    return render(request, 'ropa.html',{
+    return render(request, 'Ropa.html',{
       'mensaje':'Nuevo mensaje desde View.py',
       'nombre':'nombre',
       'Ropa':Ropas,
     })
 
+def ImplementosDeportivos_view(request):
+    ImplementosDeportivoss = ImplementosDeportivos.objects.all().order_by()
+    
+    return render(request, 'Ropa.html',{
+      'mensaje':'Nuevo mensaje desde View.py',
+      'nombre':'nombre',
+      'ImplementosDeportivos':ImplementosDeportivoss,
+    })
