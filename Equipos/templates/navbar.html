@@ -1,19 +1,32 @@
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-    <a href="{% url 'index'%}" class="navbar-brand">FIFA 2026</a>
+    <div class="logo">
+        <img src="" alt="Logo">
+    </div>
+    <a href="{% url 'index'%}" class="navbar-brand">Street League Lokazo</a>
 
     <button type="button" name="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#nav">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div id="navb" class="navbar-collapse collapse hide">
-
         <ul class="nav navbar-nav ml-auto">
-
-            {% if user.is_authenticated%}
+            {% if user.is_authenticated %}
             <li class="navbar-item">
                 <a href="{% url 'logout'%}" class="nav-link">Logout</a>
             </li>
             {% else %}
+            <li class="navbar-item">
+                <a href="" class="nav-link">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Productos
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">ropa</a></li>
+                  <li><a class="dropdown-item" href="#">implementos deportivos</a></li>
+                </ul>
+            </li>
             <li class="navbar-item">
                 <a href="{% url 'login' %}" class="nav-link">Login</a>
             </li>
@@ -22,6 +35,5 @@
             </li>
             {% endif %}
         </ul>
-
     </div>
 </nav>
