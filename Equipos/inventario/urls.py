@@ -3,6 +3,6 @@ from . import views
 
 
 urlpatterns = [
-    path('<pk>', views.ImplementosDeportivosDetailView.as_view(), name='Deportivovista'), #id ---> llave primaria
-    path('<pk>', views.RopaDetailView.as_view(), name='Ropavista')
+    path('<slug:slug>', views.ImplementosDeportivosDetailView.as_view(), name='Deportivovista'), #id ---> llave primaria
+    path('<slug:slug>', views.RopaDetailView.as_view(), name='Ropavista')
 ]

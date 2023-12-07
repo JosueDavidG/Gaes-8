@@ -1,6 +1,14 @@
 from django.contrib import admin
 from .models import ImplementosDeportivos,tamaños,Ropa,productos,productosImplementos
 
+class ropaAdmin(admin.ModelAdmin):
+    fields = ('nombre','descripcion','precio')
+    list_display = ('__str__', 'slug','created_at')
+
+class implementosAdmin(admin.ModelAdmin):
+    fields = ('nombre','descripcion','precio')
+    list_display = ('__str__', 'slug','created_at')
+
 @admin.register(ImplementosDeportivos)
 class ImplementoDeportivosAdmin(admin.ModelAdmin):
     list_display = ('nombre','marca','descripcion')
