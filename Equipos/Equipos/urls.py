@@ -20,6 +20,7 @@ from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 from inventario.views import RopaListView,ImplementosDeportivosListView
+from django.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,7 +29,9 @@ urlpatterns = [
     path('usuarios/logout',views.logout_view, name='logout'),
     path('usuarios/registro',views.register, name='register'),
     path('ropa',RopaListView.as_view(), name='ropa'),
-    path('deportivo/',ImplementosDeportivosListView.as_view(), name='deportivo')
+    path('deportivo/',ImplementosDeportivosListView.as_view(), name='deportivo'),
+    path('Ropavista/',include('inventario.urls')),
+    path('Deportivovista/',include('inventario.urls'))
 ]
 
 if settings.DEBUG:

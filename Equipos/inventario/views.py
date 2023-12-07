@@ -34,4 +34,8 @@ class ImplementosDeportivosListView(ListView):
 
 class ImplementosDeportivosDetailView(DetailView):
     model = ImplementosDeportivos
-    template_name = 'inventario/DeportivoVista.html'
+    template_name = 'VistaProductos/DeportivoVista.html'
+
+class RopaDetailView(DetailView):
+    model = Ropa
+    template_name = 'VistaProductos/RopaVista.html'
