@@ -35,7 +35,17 @@ class ImplementosDeportivosListView(ListView):
 class ImplementosDeportivosDetailView(DetailView):
     model = ImplementosDeportivos
     template_name = 'VistaProductos/DeportivoVista.html'
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        
+        print(context)
+        return context
 
 class RopaDetailView(DetailView):
     model = Ropa
     template_name = 'VistaProductos/RopaVista.html'
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        
+        print(context)
+        return context
