@@ -1,5 +1,6 @@
 from typing import Any
 from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
 from django.shortcuts import render
 
 from .models import Ropa,ImplementosDeportivos
@@ -29,4 +30,8 @@ class ImplementosDeportivosListView(ListView):
         
         print(context)
         return context
-    
+
+
+class ImplementosDeportivosDetailView(DetailView):
+    model = ImplementosDeportivos
+    template_name = ''
