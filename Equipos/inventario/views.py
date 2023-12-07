@@ -34,4 +34,4 @@ class ImplementosDeportivosListView(ListView):
 
 class ImplementosDeportivosDetailView(DetailView):
     model = ImplementosDeportivos
-    template_name = ''
+    template_name = 'inventario/DeportivoVista.html'
