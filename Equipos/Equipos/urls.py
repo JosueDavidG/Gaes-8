@@ -19,7 +19,7 @@ from django.urls import path
 from . import views 
 from django.conf import settings
 from django.conf.urls.static import static
-from inventario.views import RopaListView,ImplementosDeportivosListView
+from inventario.views import RopaListView,ImplementosDeportivosListView,RopaDetailView,ImplementosDeportivosDetailView
 from django.urls import include
 
 urlpatterns = [
