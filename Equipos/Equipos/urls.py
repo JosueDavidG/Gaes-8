@@ -19,13 +19,16 @@ from django.urls import path
 from . import views 
 from django.conf import settings
 from django.conf.urls.static import static
+from inventario.views import RopaListView,ImplementosDeportivosListView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index, name='index'),
     path('usuarios/login',views.login_view, name='login'),
     path('usuarios/logout',views.logout_view, name='logout'),
     path('usuarios/registro',views.register, name='register'),
-    path('ropa',views.Ropa_view, name='ropa')
+    path('ropa',RopaListView.as_view(), name='ropa'),
+    path('deportivo/',ImplementosDeportivosListView.as_view(), name='deportivo')
 ]
 
 if settings.DEBUG:

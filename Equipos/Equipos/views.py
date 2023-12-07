@@ -75,7 +75,7 @@ def Ropa_view(request):
 def ImplementosDeportivos_view(request):
     ImplementosDeportivoss = ImplementosDeportivos.objects.all().order_by()
     
-    return render(request, 'Ropa.html',{
+    return render(request, 'implementosdeportivos.html',{
       'mensaje':'Nuevo mensaje desde View.py',
       'nombre':'nombre',
       'ImplementosDeportivos':ImplementosDeportivoss,

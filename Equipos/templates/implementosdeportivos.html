@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+
+
+{% block content %}
+
+
+       
+    {% for ImplementosDeportivos in implementosdeportivos_list %}
+
+    <img src="{{ ImplementosDeportivos.foto.url }}" class="card-img-top" alt="{{ ImplementosDeportivos.name }} Foto">
+    <p>{{ ImplementosDeportivos.nombre }}</p>
+    <p>{{ ImplementosDeportivos.producto }}</p>  
+    {% endfor %}
+
+{% endblock %}
