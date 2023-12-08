@@ -1,6 +1,10 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/stilosnavbar.css'%}">
+
+
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <div class="logo">
-        <img src="" alt="Logo">
+        <img src="{% static 'img/logo blanco.png' %}" alt="Logo" width="50px">
     </div>
     <a href="{% url 'index'%}" class="navbar-brand">Street League Lokazo</a>
 
@@ -11,9 +15,9 @@
     <div id="navb" class="navbar-collapse collapse hide">
         <ul class="nav navbar-nav ml-auto">
             {% if user.is_authenticated %}
-            <li class="navbar-item">
-                <a href="{% url 'logout'%}" class="nav-link">Logout</a>
-            </li>
+                <li class="navbar-item">
+                    <a href="{% url 'logout'%}" class="nav-link">Logout</a>
+                </li>
             {% else %}
             <li class="navbar-item">
                 <a href="" class="nav-link">Inicio</a>
@@ -23,8 +27,8 @@
                   Productos
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">ropa</a></li>
-                  <li><a class="dropdown-item" href="#">implementos deportivos</a></li>
+                  <li><a class="dropdown-item" href="{% url 'ropa' %}">ropa</a></li>
+                  <li><a class="dropdown-item" href="{% url 'deportivo' %}">implementos deportivos</a></li>
                 </ul>
             </li>
             <li class="navbar-item">
